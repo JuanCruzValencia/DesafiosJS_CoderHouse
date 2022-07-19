@@ -1,0 +1,58 @@
+
+/* ESTILO DE FUENTE */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* NORMALIZE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ESTILOS HTML / BODY */
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(125, 118, 230), #fff);
+    font-size: 2em;
+    text-align: center;
+}
+
+/* ESTILOS TITULO Y SUBTITULO */
+
+.main__h1{
+    display: block;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 5rem;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+}
+
+.main__h2{
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+}
+
+.main__h4{
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 5rem;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+p {
+    display: block;
+    text-align: center;
+}
