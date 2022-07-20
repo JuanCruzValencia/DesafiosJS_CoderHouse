@@ -11,51 +11,62 @@
 //Mensaje de bienvenida y bucle que me va a servir para luego agregar mas productos al carrito
 window.confirm('Hola bienvenido al calculador de cuotas, desea calcular un producto?');
 let newProduct = true;
+//Almaceno el nombre del usuario para identar el carrito
+let userName = prompt('Por favor ingrese su nombre.');
+//Imprimo en pantalla el nombre del carrito
+document.write(`<br>Carrito de: ${userName}<br>`);
+
 do{
-    //Declaro las variables en la que voy a guardar el producto
-    const product = prompt('Ingrese el nombre del producto que desea comprar');
-    //Declaro la variable para guardar el valor del producto
-    const price = Number(prompt(`Por favor ingrese le valor del producto: ${product}`));
-    //Declaro la variable para guardar la cantidad de cuotas
-    const dues = Number(prompt('Por favor indique si desea hacerlo en 1, 6, 12 o 18 cuotas'));
-    //Funcion que devuelve el impuesto segun cantidad de cuotas elegidas
-    const taxes = (dues) => {
-        let tax = 0;
-        if(dues == 1){
-          tax = 1;
-        }
-        if(dues == 6){
-          tax = 5;
-        }
-        if(dues == 12){
-          tax = 10;
-        }
-        if(dues == 18){
-          tax = 20;
-        }
-        return tax;;
+    //Declaro la funcion que va a iniciar mi programa
+    function duesCalculator(productName, productPrice, duesChossen){
+        //Declaro la funcion que me devuelve el interes segun la cantidad de cuotas elegidas
+        function taxes(dues){
+            switch(dues){
+                case 1:
+                    return 1;
+                case 3:
+                    return 10;
+                case 6:
+                    return 20;
+                case 12:
+                    return 30
+            };
         };
-    //Funcion para saber cuanto es el recargo
-    const totalProduct = (price) => {
-        result = (price * taxes(dues)) / 100;
-        return result;
+        //Declaro la funcion para calcular el valor de la cuota
+        function duesPay(total, dues){
+            let result = total / dues;
+            return result;
+        };
+        //Declaro la funcion que me devuelce el precio con los impuestos
+        function total(price, tax){
+            let partial = (price*tax)/100;
+            let total = price + partial;
+            return total;
+        };
+        //LLamo la funcion por el porcentaje de impuestos y lo guardo en una nueva variable
+        let totalTax = taxes(duesChossen);
+        //LLamo a la funcion del total y lo guardo en una nueva variable
+        let totalProduct = total(productPrice, totalTax);
+        //Llamo a la funcion por el valor de cuota y lo guardo en una variable
+        let duesPayment = duesPay(totalProduct, duesChossen);
+        //Imprimo en pantalla el carrito
+        document.write(`<br>Producto: ${productName}<br>`);
+        document.write(`Precio: $${productPrice}<br>`);
+        document.write(`Cuotas: ${duesChossen}<br>`);
+        document.write(`Impuestos: ${totalTax}%<br>`);
+        document.write(`Precio + impuesto: $${totalProduct}<br>`);
+        document.write(`Precio de cuotas: $${duesPayment}<br>`);
+        //Salida del bucle
+        const exit = confirm('Desea consultar por otro producto?');
+        if(exit == false){
+            newProduct = false;
+        };
     };
-    //Funcion para saber cual es el total
-    const totalProductWithTax = () => {
-        result = price + totalProduct(price);
-        return result;
-    }
-    //Que se imprima en pantalla toda la informacion recolectada
-    document.write(`<br>Producto: ${product}<br>`);
-    document.write(`Precio: ${price}<br>`);
-    document.write(`Cuotas: ${dues}<br>`);
-    document.write(`Impuesto: ${taxes(dues)}%<br>`);
-    document.write(`Total recargo: $${totalProduct(price)}<br>`);
-    document.write(`Total con impuesto: $${totalProductWithTax()}<br>`);
-    document.write(`Total cuota: $${(totalProductWithTax()/dues).toFixed()}<br>`);
-    //Salida del bucle
-    const exit = confirm('Desea consultar por otro producto?');
-    if(exit == false){
-        newProduct = false;
-    };
+    //Decalro las variables que necesito almacenar
+    let productName = prompt(`${userName} ingrese el nombre del producto que quiere agregar al carrito.`);
+    let productPrice = Number(prompt(`${userName} ingrese el valor de: ${productName}.`));
+    let duesChossen = Number(prompt(`Indique la cantidad de cuotas en la que desea pagar, los ingresos validos son una cuotas, 3 cuotas, 6 cuotas o 12 cuotas.`));
+    //llamo a la funcion que va a iniciar mi programa
+    duesCalculator(productName, productPrice, duesChossen);
+
 } while(newProduct)
