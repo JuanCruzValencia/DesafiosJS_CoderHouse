@@ -12,7 +12,7 @@
 window.confirm('Hola bienvenido al calculador de cuotas, desea calcular un producto?');
 let newProduct = true;
 //Almaceno el nombre del usuario para identar el carrito
-let userName = prompt('Por favor ingrese su nombre.').toLocaleLowerCase();
+let userName = prompt('Por favor ingrese su nombre.').toLowerCase();
 //Imprimo en pantalla el nombre del carrito
 document.write(`<br>Carrito de: ${userName}<br>`);
 
