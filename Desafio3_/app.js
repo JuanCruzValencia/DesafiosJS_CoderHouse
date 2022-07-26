@@ -30,7 +30,7 @@ function newWeather(){
 };
 
 //Mensaje de bienvenida y pregunta que desea hacer el usuario
-const newInput = window.confirm('Bienvenido a la nueva aplicacion del clima personalizable, desea ingresar su porpia informacion o elegir una de las preestablecidas?');
+const newInput = confirm('Bienvenido a la nueva aplicacion del clima personalizable, desea ingresar su porpia informacion o elegir una de las preestablecidas?');
 if(newInput){
     //Si elige crear su informacion llama a la funcion que construye un nuevo clima y luego imprime en consola
     newWeather();
