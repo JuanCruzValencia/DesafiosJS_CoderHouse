@@ -29,12 +29,14 @@ function newWeather(){
     allSeasons.push(newSeason);
 };
 
-//Mensaje de bienvenida
+//Mensaje de bienvenida y pregunta que desea hacer el usuario
 const newInput = window.confirm('Bienvenido a la nueva aplicacion del clima personalizable, desea ingresar su porpia informacion o elegir una de las preestablecidas?');
 if(newInput){
+    //Si elige crear su informacion llama a la funcion que construye un nuevo clima y luego imprime en consola
     newWeather();
     console.log(allSeasons[allSeasons.length - 1]);
 } else{
+    //Si quiere ver unos preestablecido elige cual mediante el condicional y luego imprime en consola
     let preWather = prompt('Elija uno de los climas preestablecidos: Verano, Invierno, Primavera u Otonio').toLowerCase();
     switch(preWather){
         case 'verano':
