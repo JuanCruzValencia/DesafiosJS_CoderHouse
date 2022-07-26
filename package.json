@@ -1,0 +1,21 @@
+{
+  "name": "valenciajuancruz_desafios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --include-path scss sass/export.scss ./translated.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanCruzValencia/DesafiosJS_CoderHouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanCruzValencia/DesafiosJS_CoderHouse/issues"
+  },
+  "homepage": "https://github.com/JuanCruzValencia/DesafiosJS_CoderHouse#readme"
+}
