@@ -37,8 +37,8 @@ if(newInput){
     console.log(allSeasons[allSeasons.length - 1]);
 } else{
     //Si quiere ver unos preestablecido elige cual mediante el condicional y luego imprime en consola
-    let preWather = prompt('Elija uno de los climas preestablecidos: Verano, Invierno, Primavera u Otonio').toLowerCase();
-    switch(preWather){
+    let preWeather = prompt('Elija uno de los climas preestablecidos: Verano, Invierno, Primavera u Otonio').toLowerCase();
+    switch(preWeather){
         case 'verano':
             console.log(allSeasons[0]);
             break;
