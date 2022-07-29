@@ -161,15 +161,20 @@ body{
 /* ESTILOS STICKY APP */
 
 .sticky_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 550px;
+    display: flex;
+    flex-flow: column;
+    height: 600px;
     width: 500px;
     margin: 5rem auto;
     justify-content: space-evenly;
     background-color: #403F4C;
     border-radius: 7px;
+}
+
+.notes_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .sticky_container .sticky-note1{
@@ -178,6 +183,14 @@ body{
     border-radius: 7px;
     max-height: 250px;
     overflow: scroll;
+}
+
+.sticky_title {
+    align-self: flex-start;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #fff;
 }
 
 .sticky_container .sticky-note2{
@@ -206,15 +219,15 @@ body{
 
 }
 
-.sticky_container > .sticky-note1::-webkit-scrollbar{
+.sticky-note1::-webkit-scrollbar{
     display: none;
 }
-.sticky_container > .sticky-note2::-webkit-scrollbar{
+.sticky-note2::-webkit-scrollbar{
     display: none;
 }
-.sticky_container > .sticky-note3::-webkit-scrollbar{
+.sticky-note3::-webkit-scrollbar{
     display: none;
 }
-.sticky_container > .sticky-note4::-webkit-scrollbar{
+.sticky-note4::-webkit-scrollbar{
     display: none;
 }
