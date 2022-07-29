@@ -12,10 +12,10 @@ class Season {
 };
 
 //Objetos preconstruidos
-const summer = new Season('32°', 'Lunes 10', '98%', '10%', 'Soleado');
-const autumn = new Season('17°', 'Miercoles 20', '75%', '40%', 'Nublado con chaparrones');
-const winter = new Season('5°', 'Martes 23', '80%', '90%', 'Frio y lluvias');
-const spring = new Season('25°', 'Viernes 31', '90%', '0%', 'Despejado');
+const summer = new Season(32, 'Lunes 10', '98%', '10%', 'Soleado');
+const autumn = new Season(17, 'Miercoles 20', '75%', '40%', 'Nublado con chaparrones');
+const winter = new Season(5, 'Martes 23', '80%', '90%', 'Frio y lluvias');
+const spring = new Season(25, 'Viernes 31', '90%', '0%', 'Despejado');
 const allSeasons = [summer, autumn, winter, spring];
 
 //funcion que me permite contruir un nuevo clima

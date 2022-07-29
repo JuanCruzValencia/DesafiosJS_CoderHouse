@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Titulo del Desafio y nombre -->
+    <h1 class="main__h1">weather app</h1>
+    <h2 class="main__h2">modelo estatico</h2>
+    <!-- Contenedor de toda la vista -->
+    <div class="main_container">
+        <div class="app_container">
+            <!-- Contenedor de los inputs -->
+            <div class="input_container">
+                <input type="text" placeholder="que cuidad esta buscando?" class="city_input">
+                <input type="submit" class="submit_input">
+            </div>
+            <!-- Contendor de la informacion de la cuidad -->
+            <div class="information_container">
+                <div class="cityInfo_container">
+                    <h2 class="city--name">cuidad de buenos aires</h2>
+                    <h4 class="city--date">martes, 23 de agosto</h4>
+                </div>
+                <!-- Informacion del clima -->
+                <div class="weather-info_container">
+                    <div class="icon"><i class="fa-solid fa-sun"></i><span class="icon_info">soleado</span></div>
+                    <div class="humidity"><span>humedad: 96%</span></div>
+                    <div class="temperature"><span>16&deg;</span></div>
+                    <div class="wind"><span>viernto: 5km/h</span></div>
+                </div>
+                <!-- Contedor de la informacion del resto de la semana -->
+                <div class="moreInfo_container">
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">mar</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">mier</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">jue</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">vie</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">sab</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">dom</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Agregando un sticky note a la app como posible mejora -->
+        <div class="sticky_container">
+            <div class="sticky-note1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa debitis est et enim corrupti voluptatum rerum commodi, voluptate voluptatem blanditiis quidem dolor qui in eaque placeat quisquam mollitia repudiandae illum?</p></div>
+            <div class="sticky-note2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta obcaecati incidunt perferendis fugit a quibusdam recusandae quia voluptate doloremque tempora, fuga odit! Recusandae, quidem aliquam. Soluta blanditiis alias sed labore.</p></div>
+            <div class="sticky-note3"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo distinctio excepturi, cupiditate consequatur fuga officia dignissimos voluptate quisquam provident nobis in commodi consectetur molestiae ratione, voluptatum possimus nisi iste reprehenderit!</p></div>
+            <div class="sticky-note4"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo distinctio excepturi, cupiditate consequatur fuga officia dignissimos voluptate quisquam provident nobis in commodi consectetur molestiae ratione, voluptatum possimus nisi iste reprehenderit!</p></div>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="./app2.js"></script>
+    <!-- script de los inconos -->
+    <script src="https://kit.fontawesome.com/c539e2d60d.js" crossorigin="anonymous"></script>
+</body>
+</html>
