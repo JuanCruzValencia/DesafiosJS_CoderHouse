@@ -106,13 +106,20 @@ const winter = new Season('Invierno', '5', 'Martes, 23 de Agosto', '80%', '20%',
 const spring = new Season('Primavera', '25', 'Viernes, 31 de Septiembre', '90%', '0%', 'Este dia no existe, tuki');
 const allSeasons = [summer, autumn, winter, spring];
 
+//Funcion para terminar mi programa
+function exit(){
+  userAnswer = false;
+}
+
 //Iniciando el programa
 let userAnswer = true
 do {
   let welcomeMessage = prompt('Bienvenido a WeatherApp, que desea hacer?\n\n1. Ver algun clima preestablecido e imprimirlo en consola?\n2. Crear su propio clima?\n3. Salir');
   if(welcomeMessage === '1'){
-    getPreWeather() //Toma un clima preestablecido y lo imprime en consola
+    getPreWeather(); //Toma un clima preestablecido y lo imprime en consola
+    exit();
   } else if(welcomeMessage === '2'){
-    newWeather() //Construye nuevo clima, guarda e imprime en consola
-  } else userAnswer = false; //Salida
+    newWeather(); //Construye nuevo clima, guarda e imprime en consola
+    exit();
+  } else exit(); //Salida
 } while(userAnswer)
