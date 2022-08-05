@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Titulo del Desafio y nombre -->
+    <h1 class="main__h1">weather app</h1>
+    <h2 class="main__h2">modelo estatico</h2>
+    <!-- Contenedor de toda la vista -->
+    <div class="main_container">
+        <div class="app_container">
+            <!-- Contenedor de los inputs -->
+            <div class="input_container">
+                <input type="text" placeholder="Buenos Aires, Madrid, Punta del Este o California?" class="city_input">
+                <button class="submit_input">Enviar</button>
+            </div>
+            <!-- Contendor de la informacion de la cuidad -->
+            <div class="information_container">
+                <div class="cityInfo_container">
+                    <h2 class="city--name"></h2>
+                    <h4 class="city--date"></h4>
+                </div>
+                <!-- Informacion del clima -->
+                <div class="weather-info_container">
+                    <div class="icon"></div>
+                    <div class="humidity"></div>
+                    <div class="temperature"></div>
+                    <div class="wind"></div>
+                </div>
+                <!-- Contedor de la informacion del resto de la semana -->
+                <div class="moreInfo_container">
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">mar</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">mier</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">jue</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">vie</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">sab</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                    <div class="day_container">
+                        <span class="dayOfTheWeek">dom</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <span class="dayTemp">17&deg;/20&deg;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Agregando un formulario flotante para que el usuario ingrese su clima -->
+        <div id="play_container"><button id="play_button">juega</button></div>
+        <div id="weather_form-container">
+            <h2 class="weather_form-title">crea tu clima personalizado</h2>
+            <div class="form_instructions"><p class="form_instructions-text">Completa el formulario para crear tu propio clima</p></div>
+            <form id="weather_form">
+                <label for="weather_input-cityName">Ingrese el nombre de la ciudad</label>
+                <input type="text" id="weather_input-cityName" placeholder="Ej: Buenos aires">
+                <label for="weather_input-temperature">Ingrese la temperatura que esta haciendo</label>
+                <input type="text" id="weather_input-temperature" placeholder="Ej: 23">
+                <label for="weather_input-humidity">Ingrese el porcentaje de humedad</label>
+                <input type="text" id="weather_input-humidity" placeholder="Ej: 98">
+                <label for="weather_input-wind">Ingrese la velocidad del viento</label>
+                <input type="text" id="weather_input-wind" placeholder="Ej: 10">
+                <label for="weather_input-icon">Ingrese Soleado, Nublado, LLuvias, Espectacular u Horrible</label>
+                <input type="text" id="weather_input-icon" placeholder="Ej: Soleado">
+            </form>
+            <button id="weather_form-button">aceptar</button>
+        </div>
+        <!-- Agregando un sticky note a la app como posible mejora -->
+        <div class="sticky_container">
+            <h3 class="sticky_title">Notas:</h3>
+            <div class="notes_container">
+                <button class="note_button"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="./app1.js"></script>
+    <script src="./app2.js"></script>
+    <!-- script de los inconos -->
+    <script src="https://kit.fontawesome.com/c539e2d60d.js" crossorigin="anonymous"></script>
+</body>
+</html>
