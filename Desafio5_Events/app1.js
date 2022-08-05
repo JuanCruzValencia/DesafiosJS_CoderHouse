@@ -75,16 +75,35 @@ function getPreWeather(){
   if(choice) printDom(choice)
 };
 
+//Evento cuando el usuario ingresa uno de los climas predeterminados
 const inputSubmit = document.querySelector('.submit_input');
 inputSubmit.addEventListener('click', () => getPreWeather());
 
-let userNewWeather = document.getElementById('weather_form-button');
+//Evento cuando el usuario ingresa su propio clima y se cierra la ventana
+const userNewWeather = document.getElementById('form_ok-button');
+const weatherForm = document.getElementById('weather_form-container');
 userNewWeather.addEventListener('click', () => {
   newWeather();
-  weatherForm.style.display = 'none';
+  closeForm();
 });
 
-let weatherForm = document.getElementById('weather_form-container');
+//funcion que abre el popup form
+function openForm(){
+  weatherForm.style.display = 'flex';
+}
+//funcionm que cierra el popuopform
+const cancelButton = document.getElementById('form_cancel-button');
+cancelButton.addEventListener('click', () => {
+  closeForm();
+});
+function closeForm(){
+  weatherForm.style.display = 'none';
+}
+//Evento que abre el form para ingresar le nuevo clima
+const playButton = document.getElementById('play_button');
+playButton.addEventListener('click', () => {
+  openForm();
+});
 
 //Funcion que le permite al usuario construir un nuevo clima
 function newWeather(){
