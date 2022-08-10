@@ -11,11 +11,11 @@ function randomAlfNum(){
     for(let i = 0; i < 6; i++){
       result += alfNum[Math.floor(Math.random()* alfNum.length)];
     }
-    return result;
+    return '#' + result;
 }
 
 //Agrego evento al boton para que cambie el color del fondo y ademas muestre el color en pantalla
 btn.addEventListener('click', () => {
-    document.body.style.backgroundColor = '#' + randomAlfNum();
+    document.body.style.backgroundColor = randomAlfNum();
 });
 
