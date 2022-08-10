@@ -14,12 +14,12 @@ existingNotes().forEach((note) => {
 //Agrego evento cuando dan click en nueva nota
 newNoteButton.addEventListener('click', () => addNote());
 
-//Funcion que devuelve todas mis notas
+//Funcion que devuelve todas mis notas de JSON
 function existingNotes(){
   return JSON.parse(localStorage.getItem('note') || "[ ]");
 }
 
-//Funcion que guarda mi nuevas notas en  mi array
+//Funcion que guarda mi nuevas notas en  mi array/JSON
 function saveNote(notes){
   //noteContainer.push(notes);
   localStorage.setItem('note', JSON.stringify(notes));
